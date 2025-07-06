@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>java传递类型 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="在Java中，按值传递是指每次传递的都是变量的副本，而非变量值本身，因此修改传递的值并不会影响变量本身的值。基本类型直接拷贝值，对象类型拷贝引用地址。
+java中其实不存在名副其实的按引用传递，java中的按引用传递本质上是传递被引用内存地址副本的值，此地址会指向堆内存中的变量值。因此，此副本可以修">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="java传递类型"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/null">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-java传递类型" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2025-07-06T10:15:35.000Z"><a href="/2025/07/06/java%E4%BC%A0%E9%80%92%E7%B1%BB%E5%9E%8B/">2025-07-06</a></time>
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">java传递类型</h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>在Java中，<strong>按值传递</strong>是指每次传递的都是变量的副本，而非变量值本身，因此修改传递的值并不会影响变量本身的值。基本类型直接拷贝值，对象类型拷贝引用地址。</p>
+<p>java中其实不存在名副其实的<strong>按引用传递</strong>，java中的按引用传递本质上是传递被引用内存地址副本的值，此地址会指向堆内存中的变量值。因此，此副本可以修改原变量的值。传递对象引用类似于传递一张酒店房卡的复印件（你可以用复印件修改房间内的物品，但撕掉复印件不会影响原房卡）。</p>
+<p>在Java中，无论基本类型还是对象类型，<strong>始终传递的是值</strong>（对象类型传递的是引用地址的值），因此严格来说不存在按引用传递。</p>
+<ul>
+<li><strong>按值传递</strong>：<br>“方法接收的是调用者提供的值的<strong>副本</strong>，对参数的修改不会影响原始变量。”</li>
+<li><strong>按引用传递</strong>：<br>“方法直接操作调用者提供的<strong>原始变量</strong>（而非副本），所有修改都会反映到原始变量上。”</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://example.com/2025/07/06/java%E4%BC%A0%E9%80%92%E7%B1%BB%E5%9E%8B/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="as_sitesearch" value="example.com">
+  </form>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/C/">C</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+
+  
+  <div class="widget widget-archives">
+    <h3 class="title">Archives</h3>
+    <div class="entry">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">July 2025</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2025 John Doe
+  
+</div>
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
