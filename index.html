@@ -61,7 +61,7 @@
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <h1 id="入门程序"><a href="#入门程序" class="headerlink" title="入门程序"></a>
+        <p>mybatis学习小记
       
     </div>
     <footer>
@@ -97,19 +97,15 @@
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <span id="more"></span>在Java中，**按值传递**是指每次传递的都是变量的副本，而非变量值本身，因此修改传递的值并不会影响变量本身的值。基本类型直接拷贝值，对象类型拷贝引用地址。
-
-<p>java中其实不存在名副其实的<strong>按引用传递</strong>，java中的按引用传递本质上是传递被引用内存地址副本的值，此地址会指向堆内存中的变量值。因此，此副本可以修改原变量的值。传递对象引用类似于传递一张酒店房卡的复印件（你可以用复印件修改房间内的物品，但撕掉复印件不会影响原房卡）。</p>
-<p>在Java中，无论基本类型还是对象类型，<strong>始终传递的是值</strong>（对象类型传递的是引用地址的值），因此严格来说不存在按引用传递。</p>
-<ul>
-<li><strong>按值传递</strong>：<br>“方法接收的是调用者提供的值的<strong>副本</strong>，对参数的修改不会影响原始变量。”</li>
-<li><strong>按引用传递</strong>：<br>“方法直接操作调用者提供的<strong>原始变量</strong>（而非副本），所有修改都会反映到原始变量上。”</li>
-</ul>
-
+        <p>Java传递类型详解
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2025/07/06/java%E4%BC%A0%E9%80%92%E7%B1%BB%E5%9E%8B/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -137,59 +133,15 @@
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <span id="more"></span>本文所有代码内容推荐直接复制粘贴，以防输入错误。
-
-<h1 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a>一、下载</h1><p>微信。</p>
-<h1 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h1><p>1.打开jdk-8u341-windows-x64，进入如下页面，点击下一步。<br><img src="/upload/image-dDxH.png" alt="img"></p>
-<p>2.无需修改安装位置，单击下一步。</p>
-<p><img src="/upload/image-eSJc.png" alt="img"></p>
-<p>*<strong>当你看到绿色进度条开始加载时，注意，到这还没安装完，别着急点*</strong></p>
-<p>3.等待进度条加载完成后，会出现如下界面，依旧不修改安装位置，直接单击下一步</p>
-<p><img src="/upload/image-mzut.png" alt="img"></p>
-<p>4.此时的绿色进度条加载完成并显示如下界面时才真正的安装完成。（如下两个图）</p>
-<p><img src="/upload/image-IHRk.png" alt="img"></p>
-<p><img src="/upload/image-fMLw.png" alt="img"></p>
-<h1 id="三、环境变量配置（此步骤不可跳过）"><a href="#三、环境变量配置（此步骤不可跳过）" class="headerlink" title="三、环境变量配置（此步骤不可跳过）"></a>三、环境变量配置（此步骤不可跳过）</h1><p>1.WIN+R打开运行，输入sysdm.cpl，出现如下界面，点击“<strong>高级</strong>”。</p>
-<p><img src="/upload/image-CkuK.png" alt="img"></p>
-<p>2.单击**“环境变量”**</p>
-<p><img src="/upload/image-IkIL.png" alt="img"></p>
-<p>3.在下方的<strong>系统变量</strong>区域点击新建。</p>
-<p><img src="/upload/image-iDFk.png" alt="img"></p>
-<p>4.java8环境变量配置共需<strong>三步</strong>。</p>
-<p>1.新建JAVA_HOME，变量值为你jdk的安装位置，上述步骤未更改可直接复制以下内容，然后单击确定。<img src="/upload/image-viPP.png" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME</span><br><span class="line">C:\Program Files\Java\jdk1.8.0_341</span><br></pre></td></tr></table></figure>
-
-<p>2.新建CLASSPATH环境变量，变量值为以下内容，输入进去然后单击确定。</p>
-<p><img src="/upload/image-XcuY.png" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CLASSPATH</span><br><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar</span><br></pre></td></tr></table></figure>
-
-<p>3.找到Path，双击进入。</p>
-<p><img src="/upload/image-wbUy.png" alt="img">	</p>
-<p>在Path中新建两行内容（重复图片操作两次），复制下方内容即可。</p>
-<p><img src="/upload/image-kNkY.png" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-
-<p>***（***</p>
-<p>*<strong>注*</strong>：若你的Path打开以后是一行内容（如下图），并未出现上述图片的表格样式，则在开头添加如下内容即可</p>
-<p><img src="/upload/image-JGwr.png" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
-
-<p><strong>）</strong></p>
-<p>此步骤完成后点击确定即可。（连点三个确定即可退出环境变量页面。）</p>
-<p><img src="/upload/image-XoSt.png" alt="img"></p>
-<h1 id="四、验证"><a href="#四、验证" class="headerlink" title="四、验证"></a>四、验证</h1><p>Win+R打开运行窗口，输入cmd打开命令窗口，输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>
-
-<p>若出现</p>
-<p><img src="/upload/image-oRaH.png" alt="img"></p>
-<p><img src="/upload/image-SRnJ.png" alt="img"></p>
-<p>说明配置成功。</p>
-<p>*<strong>至此jdk8安装结束。*</strong></p>
-
+        <p>Java8下载安装
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2025/07/06/Java8%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -217,19 +169,15 @@
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <span id="more"></span>**抒情随记**
-
-<p>今夜应挚友邀约，一同前去观看了2025年本校毕业生晚会，去时已近夜二十二时。踏入晚会场地，映入眼帘的是潮水般的人群，心里默念“敬爱的学长学姐们就要步入社会，这一晚对他们来说又具有多么深刻的意义”。夜色黑的厉害，每个人都看不清每个人的脸，但纵然，也难掩心中的冲动之情。与挚友穿梭于人群之中，见到了“各色各样”心境的朋友们，会场周围有坐着打牌的，吃小零食聊天的，小情侣相依相偎的······</p>
-<p>与挚友寻得一片观会最佳时间，站定而视。现在正在进行朗诵节目，不过一会，随着清脆的声音落下，大荧幕上涌现“再见”两个赫然醒目的大字，心想“一届人的青春至此告一段落了”，正当我转身想要离去的那一刻，猝不及防的，一段熟悉的旋律被灌入耳道，原来“再见”不只是再见，还是那首熟悉的毕业曲。张震岳的《再见》响起后，一股无名情绪顿时涌上心头，无以言表，浑身上下打起了哆嗦，这也许就是青春的魅力，足以在回忆起时的任何时间任何地点震撼每一个人。脑海中随之而来的不是其他，而是去年巴黎奥运会时，国乒之壁樊振东对阵张本智和的那场比赛。关于那场比赛不想说太多，让我产生共鸣的是在0:2落后张本智和时，王皓指导带樊振东换了一件球衣，寓意：就当作这场比赛已经输掉了，换一件球衣智慧在于，把这次比赛当作从头来过，比分回到0：0，再给自己一次崭新的机会，重新发挥自己的全部。</p>
-<p>想到这些，我不禁联想到自己当前的处境。六月已至，盛夏将近，这对每一个考研人来说，都是最为紧要的关头。我自己并不算特别优秀突出的人，也不敢妄诩为樊振东那样的国之栋梁。在备考的路上，或是复习的压力，抑或是生活的困扰，都曾让我焦头烂额，但我也未曾轻言放弃，一直保持着兵来将挡水来土屯的心态，积极应对一切生活中的不利因素。但我在此刻自觉稍有体会当时在巴黎樊振东的心境，那是怎样的一种破釜沉舟，孤帆勇进的坚韧。我何尝不能为自己“换一件球衣”呢，由于本科层次较差，加上自己前十几年的懵懵懂懂，我其实总是做出自我质疑，但是“世界是一个巨大的草台班子”，这世界的容错性大的难以想象，我只不过是选择了一条符合自己未来规划，未来理想，人生追求的道路，这一切听起来都十分美好，我又有什么理由胆怯呢。我何尝不能把此刻当作已经失去，然后重新来过，剩下的一百多天便是老天赏赐我重新开始的机会，既然已经失去了一次，我本就一无所有，畏惧便更加荒唐。</p>
-<p>**善始者实繁，克终者盖寡。**这句话放在本文中也许适恰。愿我们都不失从头再来的勇气，愿诸位考研人都能在剩下的宝贵的学生生涯中拼劲自己的所有力气，破釜沉舟。</p>
-<p>愿自己在明年的今天，参加毕业晚会时，心中没有遗憾，没有惋惜，没有对未来一百多天自己努力不到位的懊悔。有的只是更加的斗志昂扬，胸有成竹，能够做到以<strong>全新的身份与姿态</strong>，面对崭新的未来！致自己，挚友，与诸位同路人！</p>
-<p>​                                                                                                                                                                               写于 2025.6.10 23.01.59</p>
-
+        <p><strong>抒情随记</strong>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2025/07/06/%E6%8A%92%E6%83%85%E5%B0%8F%E8%AE%B0/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -257,7 +205,7 @@
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <h3 id=""><a href="#" class="headerlink" title=""></a>
+        <p>感悟随记
       
     </div>
     <footer>
