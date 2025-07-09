@@ -1,215 +1,68 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
-
-    <meta name="description" content="mybatis学习小记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mybatis">
-<meta property="og:url" content="http://example.com/2025/07/06/mybatis/index.html">
-<meta property="og:site_name" content="瞭望塔">
-<meta property="og:description" content="mybatis学习小记">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/upload/image.png">
-<meta property="article:published_time" content="2025-07-06T10:15:55.000Z">
-<meta property="article:modified_time" content="2025-07-06T10:21:18.602Z">
-<meta property="article:author" content="miracle">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/upload/image.png">
-
-
-<link rel="canonical" href="http://example.com/2025/07/06/mybatis/">
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/07/06/mybatis/","path":"2025/07/06/mybatis/","title":"mybatis"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>mybatis | 瞭望塔</title>
+  <meta charset="utf-8">
   
+  <title>mybatis | 瞭望塔</title>
+  <meta name="author" content="miracle">
+  
+  <meta name="description" content="真正的收获就藏在困难里">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-
-
-
-
-
+  <meta property="og:title" content="mybatis"/>
+  <meta property="og:site_name" content="瞭望塔"/>
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
-
+    <meta property="og:image" content=""/>
   
 
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-
-
-
-
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
   
 
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">瞭望塔</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-    </div>
-  </div>
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">瞭望塔</a></h1>
+  <h2><a href="/"></a></h2>
 </div>
-
-
-
-
-
-
-
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/null">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
 </header>
-        
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-mybatis" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">入门程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">1.1.</span> <span class="nav-text">切换数据库连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0SQL%E8%AF%AD%E5%8F%A5%E6%99%BA%E8%83%BD%E8%BE%85%E5%8A%A9%E6%8F%90%E7%A4%BA"><span class="nav-number">1.2.</span> <span class="nav-text">添加SQL语句智能辅助提示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mybatis%E5%AE%9E%E7%8E%B0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"><span class="nav-number">2.</span> <span class="nav-text">mybatis实现增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#delete%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">delete操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#insert%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">insert操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text">select操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%8F%82%E6%95%B0%E4%B8%BA%E7%A9%BA-%E6%9D%A1%E4%BB%B6%E5%8F%82%E6%95%B0%E4%B8%BA1%E6%97%B6%E4%B9%9F%E5%90%8C%E4%B8%8B"><span class="nav-number">2.3.1.</span> <span class="nav-text">条件参数为空(条件参数为1时也同下)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%8F%82%E6%95%B0%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E2"><span class="nav-number">2.3.2.</span> <span class="nav-text">条件参数大于等于2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XML%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">XML映射配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99"><span class="nav-number">3.1.</span> <span class="nav-text">定义规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">辅助配置</span></a></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">miracle</p>
-  <div class="site-description" itemprop="description">真正的收获就藏在困难里</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">7</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-  </nav>
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/06/mybatis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="miracle">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瞭望塔">
-      <meta itemprop="description" content="真正的收获就藏在困难里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="mybatis | 瞭望塔">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          mybatis
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+  <div class="post-content">
+    <header>
       
-
-      <time title="创建时间：2025-07-06 18:15:55 / 修改时间：18:21:18" itemprop="dateCreated datePublished" datetime="2025-07-06T18:15:55+08:00">2025-07-06</time>
-    </span>
-
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2025-07-06T10:15:55.000Z"><a href="/2025/07/06/mybatis/">2025-07-06</a></time>
+      
+      
   
-</div>
+    <h1 class="p-name title" itemprop="headline name">mybatis</h1>
+  
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><p>mybatis学习小记<span id="more"></span></p>
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>mybatis学习小记<span id="more"></span></p>
 <h1 id="入门程序"><a href="#入门程序" class="headerlink" title="入门程序"></a>入门程序</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">UserMapper.java</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.itheima.springboot_mybatis.mapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.itheima.springboot_mybatis.pojo.User;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Select;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Mapper</span><span class="comment">//自动生成接口的实现类对象bean，并存入IOC容器中</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//查询所有用户</span></span><br><span class="line">    <span class="meta">@Select(&quot;select id, username, password, name, age from user&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;User&gt; <span class="title function_">findAll</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line">User.java</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.itheima.springboot_mybatis.pojo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.AllArgsConstructor;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span><span class="comment">//添加了默认的get,set方法</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span><span class="comment">//有参构造</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span><span class="comment">//无参构造</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer id; <span class="comment">//ID</span></span><br><span class="line">    <span class="keyword">private</span> String username; <span class="comment">//用户名</span></span><br><span class="line">    <span class="keyword">private</span> String password; <span class="comment">//密码</span></span><br><span class="line">    <span class="keyword">private</span> String name; <span class="comment">//姓名</span></span><br><span class="line">    <span class="keyword">private</span> Integer age; <span class="comment">//年龄</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;<span class="comment">//本例中lombok失效</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;User&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, username=&#x27;&quot;</span> + username + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, password=&#x27;&quot;</span> + password + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -245,69 +98,104 @@
 <p>在rsources目录下新建目录mapper，将xml定义在此目录下即可。</p>
 <p>2、</p>
 
+      
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-
+    <footer>
+      
         
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2025/07/06/java%E4%BC%A0%E9%80%92%E7%B1%BB%E5%9E%8B/" rel="prev" title="java传递类型">
-                  <i class="fa fa-angle-left"></i> java传递类型
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
+        
+      
+      <div class="clearfix"></div>
     </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2025</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">miracle</span>
   </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
+</article>
 
-    </div>
-  </footer>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
 
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://example.com/2025/07/06/mybatis/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="as_sitesearch" value="example.com">
+  </form>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/C/">C</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+
+  
+  <div class="widget widget-archives">
+    <h3 class="title">归档</h3>
+    <div class="entry">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">七月 2025</a><span class="archive-list-count">7</span></li></ul>
+    </div>
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2025 miracle
+  
+</div>
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 </body>
 </html>
